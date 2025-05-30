@@ -176,3 +176,40 @@ const person = {
     }
 
 }
+
+// default Params
+function rollDie(numSides = 6){
+
+    return Math.floor(Math.random() * numSides) + 1
+
+}
+
+function greet(name="Jane Doe", greeting="Hey there" ,punc ="!"){
+    console.log(`${name}, ${greeting} ${punc}`)
+}
+
+nums=[1,7,56,45,90,1445,24143124]
+//Spread
+console.log(Math.max(...nums))
+
+console.log(..."Hello")
+console.log(...nums)
+
+//spread with array literals
+
+cats =["soap","mighty","buubles"]
+dogs=["sohan","boogers"]
+
+allPets = [...cats,...dogs]
+console.log(allPets)
+
+//spread with objects
+
+const formInfo = {
+    name:"freedy",
+    password:"asdadad",
+    userName:"nick123"
+}
+
+const newForm = {...formInfo,Id:1234, isAdmin:false}
+console.log(newForm)
