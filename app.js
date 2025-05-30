@@ -113,8 +113,66 @@ movies = [
     
 // }, 2000);
 
-numbers = [1,2,3,4,5,6,7,8,9,10]
+// numbers = [1,2,3,4,5,6,7,8,9,10]
 
-const odd = numbers.filter((number)=>{
-    return number % 2 === 1
+// const odd = numbers.filter((number)=>{
+//     return number % 2 === 1
+// })
+
+exams = [80,71,75,76,99]
+
+const pass = exams.every( (score) => {
+    return score > 70
 })
+
+const A = exams.some((score) => {
+    return score >90
+})
+
+//finding min in array
+minScore = exams.reduce((min,score) => {
+    if(score < min){
+        return score
+    }
+    else{
+        return min
+    }
+})
+
+//finding total
+total = exams.reduce((sum, score) => {
+    return sum + score
+})
+
+//avg score
+
+avg = total / exams.length
+
+
+maxRated = movies.reduce((bestMovie,currMovie) =>{
+    if(currMovie.score > bestMovie.score){
+        return currMovie
+    }
+    else{
+        return bestMovie
+    }
+})
+
+evens = [2,4,6,8,18]
+
+sumNew = evens.reduce((sum,num) => {return sum + num},100)
+
+
+const person = {
+    firstName: "Shiva Raghav",
+    lastName: "Rajasekar",
+    fullName: function(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    shoutName: function(){
+        setTimeout(() => {
+            console.log(this.fullName())
+        },3000)
+    }
+
+}
