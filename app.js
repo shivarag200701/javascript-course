@@ -213,3 +213,56 @@ const formInfo = {
 
 const newForm = {...formInfo,Id:1234, isAdmin:false}
 console.log(newForm)
+
+//Rest Params
+// const medals = function(gold,silver,bronze,...parti){
+//     console.log(`Gold Medal for ${gold}`)
+//     console.log(`Silver Medal for ${silver}`)
+//     console.log(`Participation ${parti}`)
+// }
+
+// medals("Shiva" , "Raghav" , "Sai" , "Sohan" , "Dasaraju")
+
+
+//Destructuring Arrays
+
+// const scores = [21313,34535,546456465,768686786,98080]
+
+// const [gold,silver,bronze,...parti] = scores
+
+//Destructuring Objects
+
+// const user ={
+//     email: 'harvey@gmail.com',
+//     firstName: 'harvey',
+//     lastName: 'Dent',
+//     born: 1930,
+//     died: 1980,
+//     city: 'city'}
+
+// const {firstName} = user
+
+// const {born:birthYear = 'N/A'} = user
+// const {password: secret = 'Set it u fool'} = user
+
+
+//Destrcuting parameters
+
+movies = [
+    {
+        title: "Kaapaan",
+        score: 30
+    },
+    {
+        title: "Singam",
+        score: 70
+    },
+    {
+        title: "Pizza",
+        score: 95
+    }
+]
+
+movies.map(({title,score='N/A'})=>{
+        return `${title} is rated ${score}`
+})
