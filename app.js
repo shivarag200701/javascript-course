@@ -266,3 +266,6 @@ movies = [
 movies.map(({title,score='N/A'})=>{
         return `${title} is rated ${score}`
 })
+
+
+// commit1
